@@ -1,4 +1,4 @@
-# Retrofit-Htpp-Request
+# Retrofit-Http-Request
 > Kotlin MVVM Htpp Request Using Retrofit
 
 ***Sample MVVM Architecture***
