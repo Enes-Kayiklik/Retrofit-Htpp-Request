@@ -39,10 +39,16 @@
 
 ---
 
-Buraya Gif
+> Nasıl implement ederim ?
+
+<img src="/images/implemetation.gif"/> 
 
 ***Package Architecture***
 
-Buraya Image
+<img src="/images/retrofitPackageYapısı.png"/> 
+
+> Sample screen
+
+<img src="/images/retrofitOutput.png" width="500"/> 
 
 > Retrofit MVVM Architecture ile ilgili <a href="https://medium.com/hardwareandro/android-kotlin-retrofit-2-kurulumu-ve-http-request-mvvm-1-832e6cdd5bf5" target="_blank">`Makalem`</a>
