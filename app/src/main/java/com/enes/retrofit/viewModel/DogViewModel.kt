@@ -1,15 +1,16 @@
 package com.enes.retrofit.viewModel
 
 import android.util.Log
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.enes.retrofit.model.Dog
-import com.enes.retrofit.service.RetrofitInstance.Companion.retrofitInstance
+import com.enes.retrofit.service.RetrofitApi
 import kotlinx.coroutines.launch
 
-class DogViewModel : ViewModel() {
+class DogViewModel @ViewModelInject constructor(private var retrofitApi: RetrofitApi) : ViewModel() {
 
     private var _dogData = MutableLiveData<Dog>()
     val dogData: LiveData<Dog>
@@ -24,7 +25,7 @@ class DogViewModel : ViewModel() {
         //Request işlemi Main Thread'i bloklamaması için viewModelScope içerisine yapıyoruz.
         viewModelScope.launch {
             try {
-                _dogData.value = retrofitInstance.getDogData()
+                _dogData.value = retrofitApi.getDogData()
             } catch (e: Exception) {
                 makeLog(e.message)
             }
